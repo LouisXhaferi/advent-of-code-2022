@@ -1,11 +1,10 @@
 package day03p1;
 
-import root.intersect
 import root.readLines
 
 fun main() = readLines("day3")
     .map(::compartmentalize)
-    .flatMap { (left, right) -> left intersect right }
+    .flatMap { (left, right) -> left.toSet() intersect right.toSet() }
     .map(::prioritizeItem)
     .sum()
     .let { println("day03p1: $it") }

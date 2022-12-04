@@ -1,4 +1,4 @@
-package day02p1
+package day02part1
 
 import root.readLines
 

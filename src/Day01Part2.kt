@@ -1,4 +1,4 @@
-package day01p1
+package day01part2
 
 import root.readText
 
@@ -10,6 +10,9 @@ private object Regex {
 fun main() {
     readText("day1")
         .split(Regex.EmptyLine)
-        .maxOf { block -> block.split(Regex.Newline).sumOf { line -> line.toInt() } }
-        .let { println("day01p1: $it") }
+        .map { block -> block.split(Regex.Newline).sumOf { line -> line.toInt() } }
+        .sortedDescending()
+        .take(3)
+        .sum()
+        .let { println("day1p2: $it") }
 }

@@ -1,6 +1,7 @@
-package day02p2
+package day02part2
 
 import root.readLines
+
 enum class Sign(val points: Int) {
     Rock(1),
     Paper(2),
